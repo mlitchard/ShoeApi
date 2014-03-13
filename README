@@ -1,8 +1,11 @@
-cabal sandbox init && cabal install --enable-tests . yesod-platform yesod-bin --max-backjumps=-1 --reorder-goals && yesod devel
+cd ShoeApi && cabal sandbox init && cabal install --enable-tests . yesod-platform yesod-bin --max-backjumps=-1 --reorder-goals && yesod devel
 
 start the web server needed for static files and reverse proxying
-
 I've used mighttpd and included configuration files in mighttpd_conf.
+So I did this command from ShoeApi directory.
+
+$HOME/.cabal/bin/mighty mighttpd_conf/example.conf mighttpd_conf/example.route &
+
 Alter as suits your environment.
 
 now point web browser to
@@ -13,9 +16,9 @@ Ah! no shoes! Okay here's how to fix that.
 cd demo_client
 runhaskell demo_client.hs
 
-okay refresh your browser
+okay refresh your browser.
 
-The meat of this sample are in the following files
+The meat of this sample are in the following files:
 
 Foundation.hs
 Application.hs
