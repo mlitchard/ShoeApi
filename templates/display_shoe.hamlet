@@ -1,0 +1,5 @@
+<body>
+   <p> #{(shoeDescBlurb meta)}
+   <p> #{(show $ shoeDescColor meta)}
+   <p> #{(shoeDescSize meta)}
+   <img src="http://localhost:8080/#{(shoeFilePathShoeLocation sfp)}">

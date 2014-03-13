@@ -1,0 +1,11 @@
+ShoeDesc
+       blurb Text
+       color Color
+       size Text
+       deriving Show
+
+ShoeFilePath
+      shoeId ShoeDescId Eq
+      shoeLocation FilePath
+      UniqueShoeId shoeId          
+ -- By default this file is used in Model.hs (which is imported by Foundation.hs)

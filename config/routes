@@ -1,0 +1,3 @@
+/ ListShoesR GET
+/UploadPic UploadPicR POST
+/DisplayShoe/#ShoeDescId DisplayShoeR GET

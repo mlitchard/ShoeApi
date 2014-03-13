@@ -1,0 +1,26 @@
+cabal sandbox init && cabal install --enable-tests . yesod-platform yesod-bin --max-backjumps=-1 --reorder-goals && yesod devel
+
+start the web server needed for static files and reverse proxying
+
+I've used mighttpd and included configuration files in mighttpd_conf.
+Alter as suits your environment.
+
+now point web browser to
+http://localhost:8080
+
+Ah! no shoes! Okay here's how to fix that.
+
+cd demo_client
+runhaskell demo_client.hs
+
+okay refresh your browser
+
+The meat of this sample are in the following files
+
+Foundation.hs
+Application.hs
+Library/PictureStore.hs
+Handler/*
+templates
+config/models
+config/routes

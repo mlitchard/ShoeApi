@@ -1,0 +1,8 @@
+<h1>_{MsgBigListOShoes}
+$if null pics
+    <p>_{MsgNoPics}
+$else
+    <ul>
+       $forall Entity picId pic <- pics
+            <li>
+                <a href=@{DisplayShoeR picId}>#{shoeDescBlurb pic}
